@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed": "#410003",
+                    "surface-container": "#201f1f",
+                    "outline": "#a48c7a",
+                    "tertiary-container": "#5bbe5d",
+                    "surface-dim": "#131313",
+                    "background": "#131313",
+                    "surface-variant": "#353534",
+                    "primary-fixed-dim": "#ffb77d",
+                    "on-primary-fixed-variant": "#6e3900",
+                    "tertiary-fixed": "#94f990",
+                    "tertiary": "#78dc77",
+                    "surface-bright": "#393939",
+                    "surface-container-highest": "#353534",
+                    "secondary-fixed": "#ffdad6",
+                    "surface-container-high": "#2a2a2a",
+                    "primary-fixed": "#ffdcc3",
+                    "on-secondary-fixed-variant": "#930010",
+                    "outline-variant": "#564334",
+                    "on-background": "#e5e2e1",
+                    "on-secondary-container": "#ffaea6",
+                    "on-tertiary-container": "#004910",
+                    "on-surface-variant": "#ddc1ae",
+                    "on-tertiary": "#00390a",
+                    "surface-tint": "#ffb77d",
+                    "primary": "#ffb77d",
+                    "on-primary-container": "#623200",
+                    "error": "#ffb4ab",
+                    "on-tertiary-fixed": "#002204",
+                    "secondary": "#ffb3ac",
+                    "surface": "#131313",
+                    "surface-container-low": "#1c1b1b",
+                    "primary-container": "#ff8c00",
+                    "on-error": "#690005",
+                    "on-primary": "#4d2600",
+                    "on-primary-fixed": "#2f1500",
+                    "on-tertiary-fixed-variant": "#005313",
+                    "inverse-surface": "#e5e2e1",
+                    "inverse-on-surface": "#313030",
+                    "inverse-primary": "#904d00",
+                    "error-container": "#93000a",
+                    "on-error-container": "#ffdad6",
+                    "surface-container-lowest": "#0e0e0e",
+                    "secondary-container": "#a40213",
+                    "on-secondary": "#680008",
+                    "tertiary-fixed-dim": "#78dc77",
+                    "secondary-fixed-dim": "#ffb3ac",
+                    "on-surface": "#e5e2e1"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "base": "4px",
+                    "margin-mobile": "20px",
+                    "xs": "8px",
+                    "xl": "32px",
+                    "sm": "12px",
+                    "gutter": "16px",
+                    "lg": "24px",
+                    "md": "16px"
+            },
+            "fontFamily": {
+                    "title-md": ["Montserrat"],
+                    "headline-xl": ["Montserrat"],
+                    "body-md": ["Inter"],
+                    "label-md": ["Inter"],
+                    "headline-lg-mobile": ["Montserrat"],
+                    "price-display": ["Montserrat"],
+                    "body-lg": ["Inter"],
+                    "headline-lg": ["Montserrat"]
+            },
+            "fontSize": {
+                    "title-md": ["18px", {"lineHeight": "24px", "fontWeight": "600"}],
+                    "headline-xl": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["20px", {"lineHeight": "28px", "fontWeight": "700"}],
+                    "price-display": ["20px", {"lineHeight": "24px", "fontWeight": "700"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-lg": ["24px", {"lineHeight": "32px", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+        .chart-bar {
+            transition: height 0.3s ease;
+        }
+        .cinematic-overlay {
+            background: linear-gradient(180deg, rgba(18,18,18,0) 0%, rgba(18,18,18,0.8) 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body-md text-body-md pb-24">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile h-16 bg-surface shadow-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-primary">Chaudhary Cafe</h1>
+</div>
+<div class="active:scale-95 transition-transform hover:opacity-80">
+<span class="material-symbols-outlined text-primary">search</span>
+</div>
+</header>
+<main class="pt-20 px-margin-mobile space-y-lg">
+<!-- Wallet & Withdrawal Section -->
+<section class="relative overflow-hidden rounded-xl bg-surface-container-high p-lg border border-outline-variant">
+<div class="relative z-10">
+<p class="text-on-surface-variant font-label-md uppercase tracking-wider mb-xs">Available Balance</p>
+<h2 class="font-headline-xl text-headline-xl text-primary mb-lg">₹4,280.50</h2>
+<button class="w-full bg-primary-container text-on-primary-container font-title-md py-md rounded-xl flex items-center justify-center gap-2 active:scale-95 transition-all shadow-lg">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+                    Transfer to Bank
+                </button>
+</div>
+<!-- Decorative backdrop -->
+<div class="absolute -right-10 -top-10 w-40 h-40 bg-primary opacity-5 blur-[80px] rounded-full"></div>
+</section>
+<!-- Weekly Earnings Chart -->
+<section class="bg-surface-container rounded-xl p-lg space-y-md">
+<div class="flex justify-between items-center">
+<h3 class="font-title-md text-title-md">Weekly Earnings</h3>
+<p class="text-tertiary font-label-md">+12% vs last week</p>
+</div>
+<div class="h-40 flex items-end justify-between gap-2 px-2 pt-4">
+<div class="flex flex-col items-center flex-1 gap-2">
+<div class="w-full bg-surface-variant rounded-t-sm h-[40%]"></div>
+<span class="text-[10px] text-on-surface-variant">M</span>
+</div>
+<div class="flex flex-col items-center flex-1 gap-2">
+<div class="w-full bg-surface-variant rounded-t-sm h-[65%]"></div>
+<span class="text-[10px] text-on-surface-variant">T</span>
+</div>
+<div class="flex flex-col items-center flex-1 gap-2">
+<div class="w-full bg-primary-container rounded-t-sm h-[90%]"></div>
+<span class="text-[10px] text-on-surface-variant">W</span>
+</div>
+<div class="flex flex-col items-center flex-1 gap-2">
+<div class="w-full bg-surface-variant rounded-t-sm h-[55%]"></div>
+<span class="text-[10px] text-on-surface-variant">T</span>
+</div>
+<div class="flex flex-col items-center flex-1 gap-2">
+<div class="w-full bg-surface-variant rounded-t-sm h-[75%]"></div>
+<span class="text-[10px] text-on-surface-variant">F</span>
+</div>
+<div class="flex flex-col items-center flex-1 gap-2">
+<div class="w-full bg-surface-variant rounded-t-sm h-[85%]"></div>
+<span class="text-[10px] text-on-surface-variant">S</span>
+</div>
+<div class="flex flex-col items-center flex-1 gap-2">
+<div class="w-full bg-surface-variant rounded-t-sm h-[30%]"></div>
+<span class="text-[10px] text-on-surface-variant">S</span>
+</div>
+</div>
+</section>
+<!-- Performance Stats Grid -->
+<section class="bento-grid">
+<div class="bg-surface-container-low p-md rounded-xl border border-outline-variant flex flex-col justify-between">
+<span class="material-symbols-outlined text-primary-fixed-dim" style="font-variation-settings: 'FILL' 1;">star</span>
+<div>
+<p class="font-headline-lg-mobile text-headline-lg-mobile">4.8</p>
+<p class="text-on-surface-variant font-label-md">Rating</p>
+</div>
+</div>
+<div class="bg-surface-container-low p-md rounded-xl border border-outline-variant flex flex-col justify-between">
+<span class="material-symbols-outlined text-tertiary">schedule</span>
+<div>
+<p class="font-headline-lg-mobile text-headline-lg-mobile">98%</p>
+<p class="text-on-surface-variant font-label-md">On-time</p>
+</div>
+</div>
+<div class="col-span-2 bg-surface-container-low p-md rounded-xl border border-outline-variant flex items-center justify-between">
+<div class="flex items-center gap-md">
+<div class="p-xs bg-secondary-container rounded-lg">
+<span class="material-symbols-outlined text-on-secondary-container">check_circle</span>
+</div>
+<div>
+<p class="text-on-surface-variant font-label-md">Acceptance Rate</p>
+<p class="font-title-md text-title-md">94.2%</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant">chevron_right</span>
+</div>
+</section>
+<!-- Recent Trips List -->
+<section class="space-y-md">
+<div class="flex justify-between items-center px-xs">
+<h3 class="font-title-md text-title-md">Recent Trips</h3>
+<button class="text-primary font-label-md uppercase">View All</button>
+</div>
+<div class="space-y-sm">
+<!-- Trip 1 -->
+<div class="bg-surface-container rounded-xl p-md flex items-center gap-md">
+<div class="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A close-up shot of a gourmet margherita pizza with bubbling mozzarella, fresh basil leaves, and a rich tomato sauce, presented on a rustic dark slate board under warm dramatic lighting in a professional dark-themed restaurant kitchen atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOH42x8-qm5MiLamg3df0yskv-inTm9x-2u5LH_q_qYxjZ_toq4Al9-jFpWAHWPy4ffC3pCT0KaweBi5V-mAO69NdI4_8dn8XikfRMNKkHjqCGnSpkPYu9FwZaMiDM-azN6OWhAn03ozU3Z_gJbEfyNKH0x6Iku7pesiZGCufQiczUnOvt74M6t4PGIMC9W-jmocCuId2cAz4zWCH69b-bIwOExa6myirQGphy8kmSQPZ-Xu6ToLeZj5CxVIpd8n5EdsU9jV_1F6A"/>
+</div>
+<div class="flex-1 min-w-0">
+<p class="font-title-md text-on-surface truncate">Order #8824 • Pizza Express</p>
+<p class="text-on-surface-variant text-body-md">2.4 km • 18 mins</p>
+</div>
+<div class="text-right">
+<p class="font-price-display text-primary">₹145</p>
+<p class="text-tertiary text-[10px] font-bold uppercase">Completed</p>
+</div>
+</div>
+<!-- Trip 2 -->
+<div class="bg-surface-container rounded-xl p-md flex items-center gap-md">
+<div class="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A vibrant healthy salad bowl with roasted chicken slices, avocado, cherry tomatoes, and mixed greens, drizzled with a light vinaigrette. The image is captured with shallow depth of field against a dark, cinematic background with high contrast highlighting the freshness." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdRT96XAa_Qm3f9wOgpptZaAhdEkkg3l7xST9_bTNadkJa4yBBL-fOOEhcPDiCxPK3gkrLCXdTAKop3bB2P-qK2PajlIyP84RVSYBhS4XiRoh8G5ac6Kk9CsSAmxT48QtnVRWDheyddYNvnWpZjuuVRiRZJ-Y7sLjI7O1BbJ-DpiBTVtG_GWj56QQmPhPQ7BYxl-xGLstb_X1QQzS2BH7RGU470aqZOmn7nfpUETEOONzo6TPetHzJAQi3ZB7l-ByXUT4IufjohMo"/>
+</div>
+<div class="flex-1 min-w-0">
+<p class="font-title-md text-on-surface truncate">Order #8821 • Green Bowl Co.</p>
+<p class="text-on-surface-variant text-body-md">4.1 km • 25 mins</p>
+</div>
+<div class="text-right">
+<p class="font-price-display text-primary">₹210</p>
+<p class="text-tertiary text-[10px] font-bold uppercase">Completed</p>
+</div>
+</div>
+<!-- Trip 3 -->
+<div class="bg-surface-container rounded-xl p-md flex items-center gap-md">
+<div class="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A premium double stack cheeseburger with melting cheddar, caramelized onions, and crisp lettuce on a toasted brioche bun, positioned centrally on a dark wood surface with soft amber highlights creating an appetizing, luxurious culinary noir feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjg79lyIsPcLviBWnxpYy5U8Ewh9U8r0m--PbZINqAPADoiTvSDhdRWtYn3TazNT2xuoQWeHK0XBc-Oph0b2yX3Gz75tyYHCNyHHJht_m3jQemWYWgJgGqPuPwc_QQPNLH4NpgEXS39cmrg5hsp7Kz4qXRtCCAVzwTGVxOLUsjkd4iIZkuJii55EmlXix6-KpqjVreltj4JH5gr5lO6gpTjksPJ_ttHrpMsHn6S0RPWXwj5WLFNhLucAg3bNnfStyXJD0h9vm3_oQ"/>
+</div>
+<div class="flex-1 min-w-0">
+<p class="font-title-md text-on-surface truncate">Order #8819 • Burger King</p>
+<p class="text-on-surface-variant text-body-md">1.2 km • 12 mins</p>
+</div>
+<div class="text-right">
+<p class="font-price-display text-primary">₹95</p>
+<p class="text-tertiary text-[10px] font-bold uppercase">Completed</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center py-sm bg-surface-container border-t border-outline-variant rounded-t-xl shadow-[0_-4px_10px_rgba(0,0,0,0.4)]">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary-fixed active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-md text-label-md">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary-fixed active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">restaurant_menu</span>
+<span class="font-label-md text-label-md">Menu</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary font-bold active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">event_seat</span>
+<span class="font-label-md text-label-md">Bookings</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary-fixed active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-md text-label-md">Profile</span>
+</a>
+</nav>
+</body></html>
